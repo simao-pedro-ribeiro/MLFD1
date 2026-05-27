@@ -17,13 +17,12 @@ The code automatically:
 
 ## Features
 
-- ✅ Vectorised kernel computations (`scipy.spatial.distance.cdist`)
+- ✅ Vectorised kernel computations
 - ✅ Condition number monitoring to skip ill‑conditioned systems
 - ✅ Min‑Max scaling of inputs
 - ✅ Ridge regression (L2 penalty) for numerical stability
 - ✅ 3‑fold cross‑validation with fixed random seed
 - ✅ Easy to extend to other datasets or kernels
-- ✅ Publication‑ready plots (matplotlib, LaTeX‑ready, high DPI)
 
 ## Installation
 

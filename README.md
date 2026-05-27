@@ -1,5 +1,5 @@
 # MLFD1
-RBF surrogate model for eVTOL wing download force from sparse CFD data (9 points). Gaussian, Matérn, and compact C4 kernels with hyperparameter tuning via 3‑fold cross‑validation and Ridge regression. Includes grid search, condition number monitoring, and contour map visualisation.
+RBF surrogate model for eVTOL wing download force from CFD data (9 points). Gaussian, Matérn, and compact C4 kernels with hyperparameter tuning via 3‑fold cross‑validation and Ridge regression. Includes grid search, condition number monitoring, and contour map visualisation.
 
 # RBF Regression for eVTOL Wing Download Force
 
@@ -10,15 +10,15 @@ This repository contains a **Radial Basis Function (RBF) regression** model to p
 The code automatically:
 - Tests **three RBF kernels**: Gaussian, Matérn C4, and compact C4 (Wendland).
 - Performs a **grid search** over RBF width (`σ`) and Ridge regularisation (`α`) using **3‑fold cross‑validation**.
-- Selects the best hyperparameters based on the lowest average RMSE.
+- Selects the best hyperparameters using average cross-validated RMSE, with condition number used as a secondary stability criterion.
 - Produces a **continuous contour map** of the predicted force over the design space.
 
-**Methodological traceability** – all design choices (removal of polynomial terms, condition number cutoff, hyperparameter ranges) are documented in the code.
+**Methodological traceability** – all design choices are documented in the code.
 
 ## Features
 
 - ✅ Vectorised kernel computations
-- ✅ Condition number monitoring to skip ill‑conditioned systems
+- ✅ Condition number monitoring and rejection of ill-conditioned systems (cond(H_reg) > 1e6)
 - ✅ Min‑Max scaling of inputs
 - ✅ Ridge regression (L2 penalty) for numerical stability
 - ✅ 3‑fold cross‑validation with fixed random seed

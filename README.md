@@ -29,4 +29,3 @@ The code automatically:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/simao-pedro-ribeiro/MLFD1.git
-   cd rbf-evtol-force-surrogate

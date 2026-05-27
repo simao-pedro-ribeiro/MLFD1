@@ -3,9 +3,6 @@ RBF surrogate model for eVTOL wing download force from sparse CFD data (9 points
 
 # RBF Regression for eVTOL Wing Download Force
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Overview
 
 This repository contains a **Radial Basis Function (RBF) regression** model to predict the wing download force (N) of an eVTOL aircraft in hover. The model is trained on **only 9 CFD simulations** that sample the design space defined by horizontal (`d/D`) and vertical (`z/D`) distances between the actuator disk and the wing.
